@@ -27,6 +27,16 @@ pip install -r requirements.txt
 ### 编辑config.py
 
 配置公众号信息，修改MediaPlatforms里面的内容，多个平台以列表形式往后添加
+``` python
+MediaPlatforms = [
+    {
+        'name': 'mp_test_plat',
+        'desc': u'公众号测试平台',
+        'appid': 'xxxx', # 需要自己配置
+        'appsecret': 'xxxx', # 需要自己配置
+    },
+]
+```
 
 ### 启动服务
 
@@ -38,5 +48,6 @@ python run.py
 ### 通过webapi获得token信息
 
 ``` bash
+# name 对应config.py里面的name字段
 curl 'http://127.0.0.1:8888/token?name=xxxx'
 ```

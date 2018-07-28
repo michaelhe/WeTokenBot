@@ -18,6 +18,7 @@ def refresh_access_token():
         BotStatus.tokens.update({
             mp['name']: {
                 'token': access_token,
-                'refresh_time': datetime.datetime.now().strftime("%F %T")
+                'refresh_time': datetime.datetime.now().strftime("%F %T"),
+                'desc': mp.get('desc', '')
             }
         })

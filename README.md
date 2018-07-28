@@ -8,9 +8,9 @@
 
 ## 功能概要
 
-1. webapi 提供查看当前管理了哪些公众号
+1. webapi 提供查看当前管理了哪些公众号（未实现）
 2. api端需要能快速的获取到token信息
-3. 提供主动刷新的接口
+3. 提供主动刷新token的接口（未实现）
 4. 定时刷新token
 
 ## 模块依赖
@@ -24,5 +24,19 @@ pip install -r requirements.txt
 
 ## 快速开始
 
-配置公众号信息
+### 编辑config.py
 
+配置公众号信息，修改MediaPlatforms里面的内容，多个平台以列表形式往后添加
+
+### 启动服务
+
+``` bash
+cd wetokenbot
+python run.py
+```
+
+### 通过webapi获得token信息
+
+``` bash
+curl 'http://127.0.0.1:8888/token?name=xxxx'
+```

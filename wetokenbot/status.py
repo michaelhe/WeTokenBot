@@ -12,6 +12,7 @@ class BotStatus(object):
 
     tokens = {
         'name': {
+            'desc': 'xxxx',
             'token': 'xxxxxx',
             'refresh_time': '2018-07-04 11:33:00'
         },
